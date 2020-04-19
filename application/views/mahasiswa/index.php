@@ -1,6 +1,8 @@
 <div class="container-fluid mt-3 ml-3">
+	<div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
 	<?php if($this->session->flashdata('flash')) : ?>
-	<div class="alert alert-success alert-dismissible fade show" role="alert">
+	
+	<!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
 	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
 		<span aria-hidden="true">&times;</span>
 	  </button>
@@ -9,7 +11,8 @@
 	
 	<script>
 	  $(".alert").alert();
-	</script>
+	</script> -->
+	
 	<?php endif; ?>
 
 	<a name="tambahMahasiswa" id="tambahMahasiswa" class="btn btn-primary" href="<?= base_url();?>mahasiswa/tambah" role="button">Tambah Data Mahasiswa</a>
@@ -59,7 +62,7 @@
 						<td>
 							<a name="" id="" class="btn btn-info" href="<?= base_url(); ?>mahasiswa/detail/<?= $mhs['id']; ?>" role="button"><i class="fas fa-glasses fa-lg"></i></a>
 							<a name="" id="" class="btn btn-warning" href="<?= base_url(); ?>mahasiswa/ubah/<?= $mhs['id']; ?>" role="button"><i class="fas fa-edit fa-lg  "></i></a>
-							<a name="" id="" class="btn btn-danger" href="<?= base_url(); ?>mahasiswa/hapus/<?= $mhs['id']; ?>" role="button" onclick="return confirm('Yakin untuk menghapus <?= $mhs['nama'];?> ?');"><i class="fas fa-trash fa-lg"></i></a>
+							<a name="" id="" class="btn btn-danger tombol-hapus" href="<?= base_url(); ?>mahasiswa/hapus/<?= $mhs['id']; ?>" role="button"><i class="fas fa-trash fa-lg"></i></a>
 						</td>
                     </tr>
                     <?php endforeach; ?>					
